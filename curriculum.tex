@@ -1,118 +1,116 @@
 \documentclass[a4paper,10pt]{article}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{textcomp}
-\usepackage{amssymb}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{fancyhdr}
-\usepackage[spanish]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage{array}
-\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
-\usepackage{multirow}
-
+\usepackage[margin=1in]{geometry}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=0pt}
+\renewcommand{\baselinestretch}{1.15}
 \pagenumbering{gobble}
-
-
-\definecolor{niceblue}{RGB}{110,120,160}
-
-\usepackage{vmargin}
-\setpapersize{A4}
-\setmarginsrb{0.5cm}{0.5cm}{0.5cm}{0.1cm}
-{1cm}{0cm}%
-{1cm}{1cm}
 
 \begin{document}
 
 \begin{center}
-\huge Rodrigo Baravalle
-\begin{small}
-rbaravalle@gmail.com
-\href{https://www.linkedin.com/in/rodrigo-baravalle/}{Linkedin}
-\href{https://scholar.google.com/citations?hl=es&user=LpMyZmQAAAAJ}{Google Scholar}
-\end{small}
+    \textbf{\LARGE Rodrigo Baravalle} \\
+    \href{mailto:rbaravalle@gmail.com}{rbaravalle@gmail.com} \textbar{} 
+    \href{https://linkedin.com/in/rodrigo-baravalle}{LinkedIn} \textbar{} 
+    \href{https://scholar.google.com/citations?hl=es&user=LpMyZmQAAAAJ}{Google Scholar}
 \end{center}
 
+\vspace{0.5cm}
 
+\section*{About}
+Highly experienced technical leader with a PhD in Computer Science and over 14 years of industry experience in robotics, image and geometry processing, computer vision, and deep learning.
+Proven ability to design and deploy scalable algorithms, with solutions currently implemented in millions of robots worldwide. Published author of numerous peer-reviewed papers, combining academic rigor with practical, high-impact results. I bring strong leadership skills fostering innovation and collaboration in cross-functional, multicultural teams. Fluent in Spanish (native), English (IELTS C1), and French (DELF B2).
 
-
-\section*{\color{niceblue} \rule{2cm}{2.2pt} About}
-
-\begin{small}
-\noindent Highly experienced technical leader with a PhD in Computer Science and over 14 years of industry experience. My expertise spans various domains, including image and geometry processing, robotics, computer graphics, deep learning, and computer vision. I have authored numerous scientific publications in these fields. In addition to my technical proficiency, I bring strong leadership skills and a proven ability to thrive in diverse work environments. I excel at fostering collaboration, adaptability, and innovation within cross-functional teams. I possess multilingual proficiency in Spanish (native), English (IELTS C1), and French (DELF B2).
-
-\noindent I am eager to contribute my expertise while expanding my horizons, tackling new challenges, and driving impactful solutions.
-\end{small}
-
-
-\section*{\color{niceblue} \rule{2cm}{2.2pt} Key Skills }
-
+\section*{Key Skills}
+\textbf{Technical Expertise:}
 \begin{itemize}
-\item Programming Languages: more than 14 years of C/C++ and Python development.
-\item git, JIRA, Bitbucket, Agile Technologies; Linux development; Tensorflow, Pytorch, ROS2, OpenGL, OpenCV, CUDA, Qt.
-\item Several years of team leading experience.
-\item Lived and Worked in different countries; collaborated with on site and remote international teams. Several years of experience in academics: first author of many publications in international journals and conferences.
+    \item \textbf{Programming Languages}: C++ (14+ years), Python (14+ years)
+    \item \textbf{Frameworks and Tools}: TensorFlow, PyTorch, ROS2, OpenCV, OpenGL, CUDA, Qt
+    \item \textbf{Development Tools}: Git, Agile methodologies, Linux development
 \end{itemize}
 
-
-\section*{\color{niceblue} \rule{2cm}{2.2pt} Recent Work Experience}
-
-\noindent {\bf Principal Robotics Software Engineer}, at {\em iRobot UK}: March 2022 - Today.
-
-\noindent {\bf Senior Robotics Software Engineer}, at {\em iRobot UK}: January 2019 - March 2022.
-
-\noindent {\bf External Contractor}, at {\em iRobot}: January 2016 - January 2019.
-
+\textbf{Leadership and Collaboration:}
 \begin{itemize}
-\item Member and Lead of the Semantic Maps Team. Working on image and geometry processing algorithms for coherent and stable environment understanding. Designed to adapt to dynamic environments while preserving user preferences, such as room boundaries, despite noisy sensor inputs. Currently deployed in millions of customer robots worldwide.
-
-\item Fixed user map and SLAM graph drift issues using anchored pose information and geometry processing algorithms.
-
-\item Implemented a C++ translation tool from the robot's internal map to a user-facing map view. This played a critical role in the map remediation effort, addressing issues across different map layers.
-
-\item Fine-tuned occupancy grid autorotation algorithms by an overall margin of 1 degree, while also improving mislabelled ground truth data.
-
-\item Trained, tested, and deployed Convolutional Neural Networks (CNNs) using Keras to clean up occupancy grids from obstacles, enhancing room segmentation algorithms. Later, retrained the model from scratch using PyTorch.
-
-\item Lead the technical direction of the semantic maps team, ensuring high-quality results.
-
-\item Project Management Assistance: My contributions include project tracking, sprint planning, backlog grooming, and directing team efforts using Agile methodologies.
-
+    \item Extensive experience leading cross-functional teams, fostering innovation, and delivering high-quality results.
+    \item Project management expertise: Sprint planning, backlog grooming, Agile workflows.
+    \item Proven ability to collaborate with remote and international teams.
 \end{itemize}
 
-\noindent {\bf Postdoc Fellowship}, at {\em CONICET, Argentina}, April 2016 - March 2018.
+\textbf{Academic Proficiency:}
 \begin{itemize}
-\item Improved state of the art of bone health classification using multifractal information (published in Medical Physics journal).
-%\item Second author of Real-time monocular SLAM 3D reconstruction, published in Robotica Journal.
+    \item First author of multiple publications in international journals and conferences.
+    \item Expertise in complex algorithm design for dynamic environments.
 \end{itemize}
 
-\noindent {\bf Research Intern} at {\em iRobot}, Pasadena, USA. September 2015 - December 2015.
+\section*{Professional Experience}
+\textbf{Principal Robotics Software Engineer} \hfill March 2022 -- Present \\
+\textit{iRobot UK}
+
 \begin{itemize}
-\item Embedded and desktop image processing techniques for room segmentation from occupancy grids (published in IROS Conference).
+\item Lead the Semantic Maps Team, driving the development of image and geometry processing algorithms for stable and coherent environment understanding.
+\item Resolved SLAM graph drift issues using anchored pose information and geometry processing techniques, significantly improving map stability.
+\item Designed and implemented a C++ translation tool to convert internal robot maps into user-facing views, enhancing user experience.
+\item Fine-tuned occupancy grid autorotation algorithms, achieving a 1-degree accuracy improvement while addressing mislabeled ground truth data.
+\item Trained and deployed convolutional neural networks (CNNs) to optimize occupancy grid processing, improving room segmentation performance.
+\item Directed technical strategy for the team and provided project management support for Agile workflows.
 \end{itemize}
 
-\noindent {\bf PhD Student} at {\em CONICET, Universidad Nacional de Rosario, Argentina}, April 2011 - March 2016.
+\noindent \textbf{Senior Robotics Software Engineer} \hfill January 2019 -- March 2022 \\
+\textit{iRobot UK}
 \begin{itemize}
-\item Procedural algorithms for complex translucent porous media modeling and rendering.
-%\item Multifractals and classical machine learning image processing classification tasks (published in several international journals).
+    \item Developed and optimized geometry-based algorithms for dynamic room segmentation and user customization.
+    \item Contributed to deployment of robust solutions across millions of consumer robots globally.
 \end{itemize}
 
-\noindent {\bf Research Intern} at {\em E-MOTION, Inria}, Grenoble, France. September 2010 - February 2011.
+\noindent \textbf{External Contractor} \hfill January 2016 -- January 2019 \\
+\textit{iRobot}
 \begin{itemize}
-\item Real Time 3D Mapping of entire INRIA floors using a Time-of-Flight camera (published in INRIA).
+    \item Delivered embedded and desktop image processing techniques for occupancy grid-based room segmentation, later published in IROS Conference proceedings.
 \end{itemize}
 
+\noindent \textbf{Postdoctoral Fellow} \hfill April 2016 -- March 2018 \\
+\textit{CONICET, Argentina}
+\begin{itemize}
+    \item Advanced bone health classification techniques using multifractal analysis, published in \textit{Medical Physics}.
+\end{itemize}
 
-\section*{\color{niceblue} \rule{2cm}{2.2pt} Education}
-\noindent Sept 2024: Completed Deep Learning Specialization (Coursera).\\
-2018: PostDoc (Computer Science). CONICET, Argentina. \\
-2016: PhD. Computer Science. Universidad Nacional de Rosario, Argentina. \\
-2010: BSc. in Computer Science. Universidad Nacional de Rosario, Argentina. Academic Average: 9.4. \\
+\noindent \textbf{Research Intern} \hfill September 2015 -- December 2015 \\
+\textit{iRobot, Pasadena, USA}
+\begin{itemize}
+    \item Conducted research on embedded image processing techniques for room segmentation.
+\end{itemize}
 
+\noindent \textbf{PhD Researcher} \hfill April 2011 -- March 2016 \\
+\textit{CONICET, Universidad Nacional de Rosario, Argentina}
+\begin{itemize}
+    \item Designed procedural algorithms for modeling and rendering complex translucent porous media.
+\end{itemize}
+
+\section*{Education}
+\begin{itemize}
+    \item \textbf{Deep Learning Specialization} \hfill Completed September 2024 \\
+    Coursera
+    \item \textbf{Postdoc in Computer Science} \hfill 2018 \\
+    CONICET, Argentina
+    \item \textbf{PhD in Computer Science} \hfill 2016 \\
+    Universidad Nacional de Rosario, Argentina
+    \begin{itemize}
+        \item Thesis: \textit{Procedural Algorithms for Modeling and Rendering Complex Translucent Porous Media}
+    \end{itemize}
+    \item \textbf{BSc in Computer Science} \hfill 2010 \\
+    Universidad Nacional de Rosario, Argentina \\
+    Academic Average: 9.4/10
+\end{itemize}
+
+\section*{Volunteer Work}
+\textbf{Oxfam Volunteer} \hfill April 2024 -- Present \\
+\textit{Winchester, UK}
+\begin{itemize}
+    \item Operate the till during two-hour shifts every Friday, assisting customers and supporting store operations.
+\end{itemize}
+
+\section*{Publications}
+Available on Google Scholar: \href{https://scholar.google.com/citations?hl=es&user=LpMyZmQAAAAJ}{scholar.google.com}
 
 \end{document}
-
-
-
 
