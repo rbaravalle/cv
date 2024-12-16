@@ -1,116 +1,152 @@
 \documentclass[a4paper,10pt]{article}
-\usepackage[margin=1in]{geometry}
-\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
-\usepackage{enumitem}
-\setlist[itemize]{noitemsep, topsep=0pt}
-\renewcommand{\baselinestretch}{1.15}
-\pagenumbering{gobble}
 
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{fontawesome}
+\usepackage{xcolor}
+
+% Page layout
+\geometry{a4paper, margin=1in}
+\setlength{\parindent}{0pt}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!50!black,
+    urlcolor=blue!50!black,
+    citecolor=blue!50!black,
+}
+
+% Custom section formatting
+\usepackage{titlesec}
+\titleformat{\section}
+{\large\bfseries\color{blue!70!black}}{\thesection}{1em}{}[\titlerule]
+
+% Contact info
+\newcommand{\name}{Rodrigo Baravalle}
+\newcommand{\contact}{
+    \href{mailto:rbaravalle@gmail.com}{rbaravalle@gmail.com} \textbar\
+    \href{https://www.linkedin.com/in/rodrigo-baravalle/	}{LinkedIn} \textbar\
+    \href{https://scholar.google.com/citations?hl=es&user=LpMyZmQAAAAJ}{Google Scholar}
+}
+
+% Document begins
 \begin{document}
 
+% Header
 \begin{center}
-    \textbf{\LARGE Rodrigo Baravalle} \\
-    \href{mailto:rbaravalle@gmail.com}{rbaravalle@gmail.com} \textbar{} 
-    \href{https://linkedin.com/in/rodrigo-baravalle}{LinkedIn} \textbar{} 
-    \href{https://scholar.google.com/citations?hl=es&user=LpMyZmQAAAAJ}{Google Scholar}
+    \textbf{\Large\name} \\[0.5em]
+    \contact
 \end{center}
 
-\vspace{0.5cm}
+% Professional Summary
+\section*{Professional Summary}
+Innovative Technical Leader with 14+ years of expertise in robotics, computer graphics, and deep learning. Proven track record of designing scalable algorithms deployed in millions of robots worldwide. Combines academic rigor with industry-leading technical solutions, driving innovation through strategic leadership and cross-functional collaboration.
 
-\section*{About}
-Highly experienced technical leader with a PhD in Computer Science and over 14 years of industry experience in robotics, image and geometry processing, computer vision, and deep learning.
-Proven ability to design and deploy scalable algorithms, with solutions currently implemented in millions of robots worldwide. Published author of numerous peer-reviewed papers, combining academic rigor with practical, high-impact results. I bring strong leadership skills fostering innovation and collaboration in cross-functional, multicultural teams. Fluent in Spanish (native), English (IELTS C1), and French (DELF B2).
-
-\section*{Key Skills}
-\textbf{Technical Expertise:}
-\begin{itemize}
-    \item \textbf{Programming Languages}: C++ (14+ years), Python (14+ years)
-    \item \textbf{Frameworks and Tools}: TensorFlow, PyTorch, ROS2, OpenCV, OpenGL, CUDA, Qt
-    \item \textbf{Development Tools}: Git, Agile methodologies, Linux development
+% Skills
+\section*{Technical Expertise}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Programming Languages:}
+    \begin{itemize}
+        \item C++ (Advanced, 14+ years)
+        \item Python (Advanced, 14+ years)
+    \end{itemize}
+    
+    \item \textbf{Machine Learning \& AI:}
+    \begin{itemize}
+        \item Deep Learning Frameworks: TensorFlow, PyTorch
+        \item Convolutional Neural Networks, Classical Machine learning
+    \end{itemize}
+    
+    \item \textbf{Robotics \& Tools:}
+    \begin{itemize}
+        \item ROS2, OpenCV, SLAM Algorithms
+        \item Embedded Systems Development
+        \item Git, Linux, Agile Methodologies
+    \end{itemize}
+    \item \textbf{Computer Graphics:}
+    \begin{itemize}
+        \item Procedural Modeling
+        \item Shaders, OpenGL
+    \end{itemize}
 \end{itemize}
 
-\textbf{Leadership and Collaboration:}
-\begin{itemize}
-    \item Extensive experience leading cross-functional teams, fostering innovation, and delivering high-quality results.
-    \item Project management expertise: Sprint planning, backlog grooming, Agile workflows.
-    \item Proven ability to collaborate with remote and international teams.
-\end{itemize}
-
-\textbf{Academic Proficiency:}
-\begin{itemize}
-    \item First author of multiple publications in international journals and conferences.
-    \item Expertise in complex algorithm design for dynamic environments.
-\end{itemize}
-
+% Professional Experience
 \section*{Professional Experience}
-\textbf{Principal Robotics Software Engineer} \hfill March 2022 -- Present \\
-\textit{iRobot UK}
 
-\begin{itemize}
-\item Lead the Semantic Maps Team, driving the development of image and geometry processing algorithms for stable and coherent environment understanding.
-\item Resolved SLAM graph drift issues using anchored pose information and geometry processing techniques, significantly improving map stability.
-\item Designed and implemented a C++ translation tool to convert internal robot maps into user-facing views, enhancing user experience.
-\item Fine-tuned occupancy grid autorotation algorithms, achieving a 1-degree accuracy improvement while addressing mislabeled ground truth data.
-\item Trained and deployed convolutional neural networks (CNNs) to optimize occupancy grid processing, improving room segmentation performance.
-\item Directed technical strategy for the team and provided project management support for Agile workflows.
+\noindent\textbf{Principal Robotics Software Engineer} \hfill March 2022 -- Present \\
+\textit{iRobot UK}
+\begin{itemize}[leftmargin=*]
+    \item Led Semantic Maps Team, developing advanced image and geometry processing algorithms
+    \item Led 20+ robotics engineers by organizing teams and grooming backlogs of three squads
+    \item Resolved SLAM graph / semantic maps drift issues, greatly improving user map stability
+    \item Led and delivered dirt detective project, helping robots to detect and clean where it matters the most
 \end{itemize}
 
-\noindent \textbf{Senior Robotics Software Engineer} \hfill January 2019 -- March 2022 \\
+\noindent\textbf{Senior Robotics Software Engineer} \hfill January 2019 -- March 2022 \\
 \textit{iRobot UK}
-\begin{itemize}
-    \item Developed and optimized geometry-based algorithms for dynamic room segmentation and user customization.
-    \item Contributed to deployment of robust solutions across millions of consumer robots globally.
+\begin{itemize}[leftmargin=*]
+    \item Trained and deployed Convolutional Neural Networks enhancing room segmentation results by 10\% with respect to ground truth
+    \item Designed C++ robot to cloud translation tool to enhance robot map user experience
+    \item Member of the map remediation team, using my translation tool to fix maps on millions of customers
+    \item Fine-tuned autorotation occupancy grid algorithms, achieving 1-degree accuracy improvement
 \end{itemize}
 
-\noindent \textbf{External Contractor} \hfill January 2016 -- January 2019 \\
+\noindent\textbf{External Contractor} \hfill January 2016 -- January 2019 \\
 \textit{iRobot}
-\begin{itemize}
-    \item Delivered embedded and desktop image processing techniques for occupancy grid-based room segmentation, later published in IROS Conference proceedings.
+\begin{itemize}[leftmargin=*]
+    \item Developed embedded geometry-based algorithms for dynamic room segmentation
+    \item Published research in IROS Conference proceedings
 \end{itemize}
 
-\noindent \textbf{Postdoctoral Fellow} \hfill April 2016 -- March 2018 \\
+% Academic Experience
+\section*{Academic Experience}
+\noindent\textbf{Postdoctoral Fellow} \hfill April 2016 -- March 2018 \\
 \textit{CONICET, Argentina}
-\begin{itemize}
-    \item Advanced bone health classification techniques using multifractal analysis, published in \textit{Medical Physics}.
+\begin{itemize}[leftmargin=*]
+    \item Advanced bone health classification using multifractal analysis
+    \item Published research in Medical Physics journal
 \end{itemize}
 
-\noindent \textbf{Research Intern} \hfill September 2015 -- December 2015 \\
-\textit{iRobot, Pasadena, USA}
-\begin{itemize}
-    \item Conducted research on embedded image processing techniques for room segmentation.
-\end{itemize}
-
-\noindent \textbf{PhD Researcher} \hfill April 2011 -- March 2016 \\
+\noindent\textbf{PhD Researcher} \hfill April 2011 -- March 2016 \\
 \textit{CONICET, Universidad Nacional de Rosario, Argentina}
-\begin{itemize}
-    \item Designed procedural algorithms for modeling and rendering complex translucent porous media.
+\begin{itemize}[leftmargin=*]
+    \item Designed procedural algorithms for modeling complex translucent porous media
 \end{itemize}
 
+% Education
 \section*{Education}
-\begin{itemize}
-    \item \textbf{Deep Learning Specialization} \hfill Completed September 2024 \\
-    Coursera
-    \item \textbf{Postdoc in Computer Science} \hfill 2018 \\
-    CONICET, Argentina
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Deep Learning Specialization} \hfill September 2024
+    \item \textbf{Postdoc in Computer Science} \hfill 2018
     \item \textbf{PhD in Computer Science} \hfill 2016 \\
     Universidad Nacional de Rosario, Argentina
-    \begin{itemize}
-        \item Thesis: \textit{Procedural Algorithms for Modeling and Rendering Complex Translucent Porous Media}
-    \end{itemize}
     \item \textbf{BSc in Computer Science} \hfill 2010 \\
-    Universidad Nacional de Rosario, Argentina \\
-    Academic Average: 9.4/10
+    Universidad Nacional de Rosario, Argentina
 \end{itemize}
 
+% Language Skills
+\section*{Language Proficiency}
+\begin{itemize}[leftmargin=*]
+    \item Spanish (Native)
+    \item English (IELTS C1)
+    \item French (DELF B2)
+\end{itemize}
+
+% Volunteer Work
 \section*{Volunteer Work}
-\textbf{Oxfam Volunteer} \hfill April 2024 -- Present \\
+\noindent\textbf{Oxfam Volunteer} \hfill April 2024 -- Present \\
 \textit{Winchester, UK}
-\begin{itemize}
-    \item Operate the till during two-hour shifts every Friday, assisting customers and supporting store operations.
+\begin{itemize}[leftmargin=*]
+    \item Operating till during weekly shifts
+    \item Supporting store operations and customer service
 \end{itemize}
 
+% Publication Note
 \section*{Publications}
-Available on Google Scholar: \href{https://scholar.google.com/citations?hl=es&user=LpMyZmQAAAAJ}{scholar.google.com}
+Available on \href{https://scholar.google.com}{Google Scholar}
 
 \end{document}
-
