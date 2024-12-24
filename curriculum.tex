@@ -1,152 +1,142 @@
-\documentclass[a4paper,10pt]{article}
-
-% Packages
+\documentclass[11pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
-\usepackage{geometry}
+\usepackage{multicol}
+\usepackage[margin=0.5in]{geometry}
 \usepackage{hyperref}
-\usepackage{enumitem}
 \usepackage{fontawesome}
+\usepackage{enumitem}
 \usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{framed}
+\usepackage{changepage}
+\renewcommand{\familydefault}{\sfdefault}
 
-% Page layout
-\geometry{a4paper, margin=1in}
-\setlength{\parindent}{0pt}
 
-% Hyperlink setup
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue!50!black,
-    urlcolor=blue!50!black,
-    citecolor=blue!50!black,
-}
+% Define colors
+\definecolor{lightgrey}{RGB}{245,245,245}
+\definecolor{headerblue}{RGB}{0,102,204}
 
-% Custom section formatting
-\usepackage{titlesec}
-\titleformat{\section}
-{\large\bfseries\color{blue!70!black}}{\thesection}{1em}{}[\titlerule]
+% Custom commands
+\newcommand{\cvheading}[1]{\smallskip\noindent\textbf{\large\color{headerblue} #1}\smallskip}
+\newcommand{\role}[2]{\textbf{#1} | \textit{#2}}
+\newcommand{\cvsubheading}[1]{\smallskip\noindent\textbf{#1}}
+\newcommand\crule[3][black]{\textcolor{#1}{\rule{#2}{#3}}}
 
-% Contact info
-\newcommand{\name}{Rodrigo Baravalle}
-\newcommand{\contact}{
-    \href{mailto:rbaravalle@gmail.com}{rbaravalle@gmail.com} \textbar\
-    \href{https://www.linkedin.com/in/rodrigo-baravalle/	}{LinkedIn} \textbar\
-    \href{https://scholar.google.com/citations?hl=es&user=LpMyZmQAAAAJ}{Google Scholar}
-}
-
-% Document begins
 \begin{document}
 
-% Header
-\begin{center}
-    \textbf{\Large\name} \\[0.5em]
-    \contact
-\end{center}
 
-% Professional Summary
-\section*{Professional Summary}
-Innovative Technical Leader with 14+ years of expertise in robotics, computer graphics, and deep learning. Proven track record of designing scalable algorithms deployed in millions of robots worldwide. Combines academic rigor with industry-leading technical solutions, driving innovation through strategic leadership and cross-functional collaboration.
 
-% Skills
-\section*{Technical Expertise}
-\begin{itemize}[leftmargin=*]
-    \item \textbf{Programming Languages:}
-    \begin{itemize}
-        \item C++ (Advanced, 14+ years)
-        \item Python (Advanced, 14+ years)
-    \end{itemize}
-    
-    \item \textbf{Machine Learning \& AI:}
-    \begin{itemize}
-        \item Deep Learning Frameworks: TensorFlow, PyTorch
-        \item Convolutional Neural Networks, Classical Machine learning
-    \end{itemize}
-    
-    \item \textbf{Robotics \& Tools:}
-    \begin{itemize}
-        \item ROS2, OpenCV, SLAM Algorithms
-        \item Embedded Systems Development
-        \item Git, Linux, Agile Methodologies
-    \end{itemize}
-    \item \textbf{Computer Graphics:}
-    \begin{itemize}
-        \item Procedural Modeling
-        \item Shaders, OpenGL
-    \end{itemize}
+\begin{minipage}[c]{0.6\linewidth}
+\noindent {\huge \color{headerblue}\textbf{Baravalle} Rodrigo}\\ \\
+\textbf{Principal Software Engineer }\\
+\textbf{14+ Years} in Robotics, Computer Graphics \& Deep Learning\\
+
+\noindent \small{Visionary innovator with a proven record of designing \textbf{scalable} algorithms deployed in \textbf{millions} of robots worldwide. Combines academic excellence with cutting-edge industry solutions, driving innovation through strategic leadership and cross-functional collaboration.}
+\end{minipage}
+\noindent\colorbox{lightgrey}{%
+\begin{minipage}[c]{0.3\linewidth}
+\noindent {\large\color{headerblue} \textbf{CONTACT} INFORMATION}
+
+\faEnvelope\ \href{mailto:rbaravalle@gmail.com}{rbaravalle@gmail.com}\\
+\faLinkedin\ \href{https://www.linkedin.com/in/rodrigo-baravalle/}{LinkedIn}\\
+\faGraduationCap\ \href{https://scholar.google.com/citations?hl=es&user=LpMyZmQAAAAJ}{Publications available on Google Scholar}
+
+\end{minipage}}
+
+\crule[headerblue]{17cm}{0.7cm}
+
+\begin{minipage}[c]{0.6\linewidth}
+
+
+
+\noindent {\large\color{headerblue} \textbf{PROFESSIONAL} EXPERIENCE}
+
+\noindent \textbf{iRobot UK} | Mar 2016 -- Present
+
+\noindent \role{Principal Robotics Software Engineer}{Mar 2022 -- Present}\\
+Lead Semantic Maps Team, pioneering advanced image and geometry processing algorithms. \textbf{Manages 20+ engineers}, coordinating teams and overseeing backlogs across three squads.
+\begin{itemize}[leftmargin=*,nosep]
+\item Resolved SLAM graph and semantic map drift issues, enhancing user map stability
+\item Lead and Delivered the Dirt Detective project, enabling robots to prioritize cleaning where it's needed most
 \end{itemize}
 
-% Professional Experience
-\section*{Professional Experience}
-
-\noindent\textbf{Principal Robotics Software Engineer} \hfill March 2022 -- Present \\
-\textit{iRobot UK}
-\begin{itemize}[leftmargin=*]
-    \item Led Semantic Maps Team, developing advanced image and geometry processing algorithms
-    \item Led 20+ robotics engineers by organizing teams and grooming backlogs of three squads
-    \item Resolved SLAM graph / semantic maps drift issues, greatly improving user map stability
-    \item Led and delivered dirt detective project, helping robots to detect and clean where it matters the most
+\noindent \role{Senior Robotics Software Engineer}{Jan 2019 -- Mar 2022}\\
+Trained and deployed convolutional neural networks, improving room segmentation accuracy by 10\%. Designed a C++ robot-to-cloud translation tool, elevating user map experiences.
+\begin{itemize}[leftmargin=*,nosep]
+\item Contributed to the Map Remediation Team, fixing maps for millions of customers using custom tools
+\item Enhanced autorotation occupancy grid algorithms, achieving a 1-degree accuracy improvement
 \end{itemize}
 
-\noindent\textbf{Senior Robotics Software Engineer} \hfill January 2019 -- March 2022 \\
-\textit{iRobot UK}
-\begin{itemize}[leftmargin=*]
-    \item Trained and deployed Convolutional Neural Networks enhancing room segmentation results by 10\% with respect to ground truth
-    \item Designed C++ robot to cloud translation tool to enhance robot map user experience
-    \item Member of the map remediation team, using my translation tool to fix maps on millions of customers
-    \item Fine-tuned autorotation occupancy grid algorithms, achieving 1-degree accuracy improvement
+\noindent \role{External Contractor}{Jan 2016 -- Jan 2019}\\
+Developed embedded geometry-based algorithms for dynamic room segmentation.
+\begin{itemize}[leftmargin=*,nosep]
+\item Published research in IROS Conference proceedings
 \end{itemize}
 
-\noindent\textbf{External Contractor} \hfill January 2016 -- January 2019 \\
-\textit{iRobot}
-\begin{itemize}[leftmargin=*]
-    \item Developed embedded geometry-based algorithms for dynamic room segmentation
-    \item Published research in IROS Conference proceedings
-\end{itemize}
+\noindent \hrulefill
 
-% Academic Experience
-\section*{Academic Experience}
-\noindent\textbf{Postdoctoral Fellow} \hfill April 2016 -- March 2018 \\
+\noindent {\large\color{headerblue} \textbf{ACADEMIC} EXPERIENCE}\\
+\role{Postdoctoral Fellow}{Apr 2016 -- Mar 2018}\\
 \textit{CONICET, Argentina}
-\begin{itemize}[leftmargin=*]
-    \item Advanced bone health classification using multifractal analysis
-    \item Published research in Medical Physics journal
+\begin{itemize}[leftmargin=*,nosep]
+\item Advanced bone health classification using multifractal analysis
+\item Published research in Medical Physics journal
 \end{itemize}
 
-\noindent\textbf{PhD Researcher} \hfill April 2011 -- March 2016 \\
+\role{PhD Researcher}{Apr 2011 -- Mar 2016}\\
 \textit{CONICET, Universidad Nacional de Rosario, Argentina}
-\begin{itemize}[leftmargin=*]
-    \item Designed procedural algorithms for modeling complex translucent porous media
+\begin{itemize}[leftmargin=*,nosep]
+\item Designed procedural algorithms for modeling complex translucent porous media
 \end{itemize}
 
-% Education
-\section*{Education}
-\begin{itemize}[leftmargin=*]
-    \item \textbf{Deep Learning Specialization} \hfill September 2024
-    \item \textbf{Postdoc in Computer Science} \hfill 2018
-    \item \textbf{PhD in Computer Science} \hfill 2016 \\
-    Universidad Nacional de Rosario, Argentina
-    \item \textbf{BSc in Computer Science} \hfill 2010 \\
-    Universidad Nacional de Rosario, Argentina
+\end{minipage}
+\noindent\colorbox{lightgrey}{%
+\begin{minipage}[c]{0.3\linewidth}
+\noindent {\large\color{headerblue} \textbf{TECHNICAL} EXPERTISE}
+
+\cvsubheading{Programming Languages}
+\begin{itemize}[leftmargin=*,nosep]
+\item C++ (Advanced)
+\item Python (Advanced)
 \end{itemize}
 
-% Language Skills
-\section*{Language Proficiency}
-\begin{itemize}[leftmargin=*]
-    \item Spanish (Native)
-    \item English (IELTS C1)
-    \item French (DELF B2)
+\cvsubheading{Machine Learning \& AI}
+\begin{itemize}[leftmargin=*,nosep]
+\item Deep Learning Frameworks: TensorFlow - PyTorch
+\item Convolutional Neural Networks
+\item Classical Machine Learning
 \end{itemize}
 
-% Volunteer Work
-\section*{Volunteer Work}
-\noindent\textbf{Oxfam Volunteer} \hfill April 2024 -- Present \\
-\textit{Winchester, UK}
-\begin{itemize}[leftmargin=*]
-    \item Operating till during weekly shifts
-    \item Supporting store operations and customer service
+\cvsubheading{Robotics \& Tools}
+\begin{itemize}[leftmargin=*,nosep]
+\item ROS2 - OpenCV - SLAM Algorithms
+\item Embedded Systems Development
+\item Git - Linux - Agile Methodologies
 \end{itemize}
 
-% Publication Note
-\section*{Publications}
-Available on \href{https://scholar.google.com}{Google Scholar}
+\cvsubheading{Computer Graphics}
+\begin{itemize}[leftmargin=*,nosep]
+\item Procedural Modeling
+\item Shaders - OpenGL
+\end{itemize}
+
+\noindent \hrulefill
+
+\cvheading{EDUCATION}
+\begin{itemize}[leftmargin=*,nosep]
+\item Deep Learning Specialization | Sep 2024
+\item Postdoctoral Fellowship, PhD, and BSc in Computer Science | 2018, 2016, 2010
+\end{itemize}
+
+\noindent \hrulefill
+
+\noindent {\large\color{headerblue} \textbf{LANGUAGE} PROFICIENCY}
+\begin{itemize}[leftmargin=*,nosep]
+\item Spanish: Native
+\item English: C1 (IELTS)
+\item French: B2 (DELF)
+\end{itemize}
+
+\end{minipage}}
 
 \end{document}
